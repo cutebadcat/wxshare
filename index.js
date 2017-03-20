@@ -26,7 +26,7 @@ const WxShareObj = {
       },
       setWxConfig (wxconfig, success) {
         wx.config({
-          debug: true,
+          debug: options ? true : false,
           appId: wxconfig.appId,
           timestamp: parseInt(wxconfig.timestamp),
           nonceStr: wxconfig.nonceStr,
