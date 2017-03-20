@@ -1,4 +1,3 @@
-import config from './WechatShare.config.js'
 import wx from 'weixin-js-sdk'
 const WxShareObj = {
   install (Vue, options) {
