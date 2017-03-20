@@ -1,0 +1,22 @@
+{
+  "name": "wxshare",
+  "version": "1.0.0",
+  "description": "use to wxshare",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cutebadcat/wxshare.git"
+  },
+  "keywords": [
+    "wxshare"
+  ],
+  "author": "BadCat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cutebadcat/wxshare/issues"
+  },
+  "homepage": "https://github.com/cutebadcat/wxshare#readme"
+}

@@ -13,7 +13,7 @@ const WxShareObj = {
       //     typeof cb === 'function' && cb(res, '服务器返回http status: ' + res.status)
       //   })
       // },
-      setConfig (obj) {
+      setConfig (config, obj) {
         var postUrl = 'http://wechat.new-sailing.com/wechat/getSignPackage'
         var postData = config
         postData.url = encodeURIComponent(window.location.href)
