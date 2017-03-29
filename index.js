@@ -16,9 +16,9 @@ const WxShareObj = {
         var postUrl = 'http://wechat.new-sailing.com/wechat/getSignPackage'
         var postData = config
         postData.url = encodeURIComponent(window.location.href)
-        Vue.http.post(postUrl, postData).then(res => {
+        Vue.http.post(postUrl, postData).then(function(res) {
           this.setWxConfig(res.data.data, typeof obj === 'object' && obj.hasOwnProperty('success') ? obj.success : '')
-        }, res => {
+        }, function(res) {
           if (typeof obj === 'object' && obj.hasOwnProperty('fail')) {
             typeof obj.fail === 'function' && obj.fail('请求获取签名错误')
           }
