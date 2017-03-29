@@ -1,6 +1,7 @@
 var wx = require('weixin-js-sdk')
 const WxShareObj = {
   install: function (Vue, options) {
+    Vue.prototype.$wx = wx
     Vue.prototype.$wxshare = {
       // getParams (cb) {
       //   var postUrl = 'http://wechat.new-sailing.com/wechat/getSignPackage'
