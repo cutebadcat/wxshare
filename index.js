@@ -1,6 +1,6 @@
-import wx from 'weixin-js-sdk'
+var wx = require('weixin-js-sdk')
 const WxShareObj = {
-  install (Vue, options) {
+  install: function (Vue, options) {
     Vue.prototype.$wxshare = {
       // getParams (cb) {
       //   var postUrl = 'http://wechat.new-sailing.com/wechat/getSignPackage'
@@ -12,7 +12,7 @@ const WxShareObj = {
       //     typeof cb === 'function' && cb(res, '服务器返回http status: ' + res.status)
       //   })
       // },
-      setConfig (config, obj) {
+      setConfig: function (config, obj) {
         var postUrl = 'http://wechat.new-sailing.com/wechat/getSignPackage'
         var postData = config
         postData.url = encodeURIComponent(window.location.href)
@@ -24,7 +24,7 @@ const WxShareObj = {
           }
         })
       },
-      setWxConfig (wxconfig, success) {
+      setWxConfig: function (wxconfig, success) {
         wx.config({
           debug: options ? true : false,
           appId: wxconfig.appId,
@@ -39,20 +39,20 @@ const WxShareObj = {
         })
         typeof success === 'function' && success('wxconfig设置成功')
       },
-      setShareInfo (shareData, obj) {
-        wx.ready(() => {
+      setShareInfo: function (shareData, obj) {
+        wx.ready(function() {
           // 在这里调用 API
           wx.onMenuShareTimeline({
             title: shareData.desc, // 分享标题
             link: shareData.link, // 分享链接
             imgUrl: shareData.imgUrl, // 分享图标
-            success () {
+            success: function () {
               // 用户确认分享后执行的回调函数
               if (typeof obj === 'object' && obj.hasOwnProperty('success')) {
                 typeof obj.success === 'function' && obj.success()
               }
             },
-            cancel () {
+            cancel: function () {
               // 用户取消分享后执行的回调函数
               if (typeof obj === 'object' && obj.hasOwnProperty('cancel')) {
                 typeof obj.cancel === 'function' && obj.cancel()
@@ -68,13 +68,13 @@ const WxShareObj = {
             imgUrl: shareData.imgUrl, // 分享图标
             type: '', // 分享类型,music、video或link，不填默认为link
             dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
-            success () {
+            success: function () {
               // 用户确认分享后执行的回调函数
               if (typeof obj === 'object' && obj.hasOwnProperty('success')) {
                 typeof obj.success === 'function' && obj.success()
               }
             },
-            cancel () {
+            cancel: function () {
               // 用户取消分享后执行的回调函数
               if (typeof obj === 'object' && obj.hasOwnProperty('cancel')) {
                 typeof obj.cancel === 'function' && obj.cancel()
