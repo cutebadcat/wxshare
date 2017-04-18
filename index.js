@@ -39,7 +39,8 @@ const WxShareObj = {
             'onMenuShareTimeline',
             'onMenuShareAppMessage',
             'hideAllNonBaseMenuItem',
-            'showAllNonBaseMenuItem'
+            'showAllNonBaseMenuItem',
+            'getLocation'
           ]
         })
         typeof success === 'function' && success('wxconfig设置成功')
@@ -125,7 +126,8 @@ const WxShareObj = {
         'onMenuShareTimeline',
         'onMenuShareAppMessage',
         'hideAllNonBaseMenuItem',
-        'showAllNonBaseMenuItem'
+        'showAllNonBaseMenuItem',
+        'getLocation'
       ]
     })
     typeof success === 'function' && success('wxconfig设置成功')
