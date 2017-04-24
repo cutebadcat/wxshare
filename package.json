@@ -1,6 +1,6 @@
 {
   "name": "wxshare",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "use to wxshare",
   "main": "index.js",
   "scripts": {

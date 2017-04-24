@@ -15,7 +15,7 @@ const WxShareObj = {
       //   })
       // },
       setConfig: function (config, obj) {
-        var postUrl = 'http://wechat.new-sailing.com/wechat/getSignPackage'
+        var postUrl = config.host
         var postData = config
         postData.url = encodeURIComponent(window.location.href)
         var self = this
@@ -102,7 +102,7 @@ const WxShareObj = {
     //   })
     // },
   setConfig: function (config, obj) {
-    var postUrl = 'http://wechat.new-sailing.com/wechat/getSignPackage'
+    var postUrl = config.host
     var postData = config
     postData.url = encodeURIComponent(window.location.href)
     var self = this
